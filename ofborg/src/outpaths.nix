@@ -1,5 +1,6 @@
 #!/usr/bin/env nix-shell
-# When using as a callable script, passing `--argstr path some/path` overrides $PWD.
+# When using as a callable script, passing `--argstr path some/path`
+# overrides the directory of this file.
 #!nix-shell -p nix -i "nix-env -qaP --no-name --out-path --arg checkMeta true --argstr path $PWD -f"
 { checkMeta
 , path ? ./.
